@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCADA DTI · Banco de intercambiadores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="tabs" id="tabs" aria-label="Equipos del DTI"></nav>
+    <div class="status-row">
+      <div class="plant">Banco de intercambiadores de calor · <span class="muted">Página piloto con datos simulados</span></div>
+      <div class="status-right">
+        <button class="btn-xls" id="btn-xls" title="Descargar las lecturas registradas en un archivo de Excel">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13l4 5M12 13l-4 5"/></svg>
+          Exportar a Excel <span class="cnt" id="cnt">0</span></button>
+        <span class="badge-live"><span class="dot"></span>MONITOREO EN TIEMPO REAL (SOLO LECTURA)</span>
+        <span class="clock" id="clock">00:00:00</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="main"></main>
+
+  <button class="fab" id="fab" aria-label="Ir al final de la página">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 4v15M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <footer class="foot">Datos simulados con perfiles programados para demostración. No hay conexión con el PLC.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+SCADA DTI - Página piloto (banco de intercambiadores de calor)
+
+CÓMO ABRIRLA
+1. Descomprime la carpeta.
+2. Abre index.html con doble clic (Chrome, Edge o Firefox). No necesita internet ni instalar nada.
+
+ARCHIVOS
+- index.html : estructura de la página
+- styles.css : diseño visual (tema oscuro tipo SCADA)
+- app.js     : catálogo de variables del DTI, simulación y gráficas
+
+PESTAÑAS
+- DTI Monitoreo: vista general del banco, indicadores y alarmas
+- Intercambiadores (I-1 a I-5), Quemadores (BR-01, BR-02), Resistencias (RH-01, RH-02),
+  Válvulas de control (FV-01, FV-02), Línea de proceso (punto 1) y PLC controlador
+
+DATOS
+Todos los valores son simulados: cada variable oscila alrededor de un valor de referencia
+con una amplitud y un periodo programados en app.js (sección 1, campos base, amp y per).
+Los límites L, H y HH de cada variable también se cambian ahí.
+
+CONEXIÓN FUTURA
+Para usar datos reales del PLC, se reemplaza la función leerValor() de app.js por la
+lectura de la base de datos, usando los mismos tags.
